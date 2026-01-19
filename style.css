@@ -1,0 +1,850 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.Menu-completo {
+    display: flex;
+    background-color: black;
+    right: 1vh;
+    left: 1vh;
+    border-radius: 20px;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 5px 10px 3px gray;
+    animation: Menu-completo 3s ease infinite;
+
+}
+
+@keyframes Menu-completo {
+    0% {
+        scale: 100%;
+    }
+
+    50% {
+        scale: 102%;
+    }
+
+    100% {
+        scale: 100%;
+    }
+}
+
+.Logo {
+    margin: 3vh;
+    width: 40vh;
+    font-weight: 900;
+    font-size: 6vh;
+    color: rgb(0, 0, 185);
+}
+
+.Pergunta {
+    font-size: 6vh;
+}
+
+.Subtitulo {
+    font-weight: 500;
+    font-size: 3vh;
+
+}
+
+.Menu {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+
+}
+
+.Menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.7vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-top: 3px solid transparent;
+    transition: all 0.5s ease;
+
+}
+
+.Menu a:hover {
+    border-top: 3px solid red;
+}
+
+.Menu button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 1vh 2vh;
+    border-radius: 5px;
+    margin-right: 1vh;
+    font-size: 2.2vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    transition: all 1s ease;
+}
+
+.Menu button:hover {
+    background-color: green;
+    padding: 1.2vh 2.2vh;
+}
+
+.Dropdown {
+    display: none;
+
+}
+
+.Lista-Dropdown {
+    position: absolute;
+    top: -10vh;
+    right: 5vw;
+    display: none;
+    font-size: 4vw;
+    background-color: white;
+    box-shadow: 0px 0px 5px 1px gray;
+    list-style-type: none;
+    padding: 2vh;
+    border-radius: 5px;
+    margin-top: 20vh;
+
+
+}
+
+.Lista-Dropdown a {
+    text-decoration: none;
+    border-bottom: 1px solid red;
+    display: flex;
+    margin-top: 2vh;
+    
+}
+
+.Lista-Dropdown a:hover {
+    border-bottom: none;
+    font-size: 3.3vh;
+
+
+}
+
+.Dropdown ol {
+    list-style-type: none;
+}
+
+.Dropdown:hover .Lista-Dropdown {
+    display: block;
+
+}
+
+.BtnContato {
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 1vh;
+    margin-top: 2vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 3vh;
+
+}
+
+
+
+.BtnContato:hover {
+    background-color: green;
+    scale: 105%;
+}
+
+.Contato {
+    width: 10vh;
+    height: 10vh;
+    background-color: rgb(53, 143, 53);
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px 1px rgb(195, 195, 195);
+    animation: Animação 0.5s linear infinite;
+    z-index: 999;
+}
+
+.Contato:hover {
+    scale: 110%;
+
+}
+
+.Contato:hover .Dropdown-Whtasapp {
+    display: flex;
+}
+
+.ImgContato {
+    height: 6vh;
+}
+
+.BtnContato:hover .Contatos {
+    display: block;
+}
+
+.Contatos {
+    display: none;
+    position: absolute;
+    font-size: 3vh;
+    list-style-type: none;
+    background: white;
+    border-radius: 10px;
+    border-bottom: none;
+    min-width: 20vw;
+    width: auto;
+    padding: 2vh;
+    right: 20vw;
+    box-shadow: 0px 0px 3px 0.5px gray;
+
+}
+
+.Dropdown-Whtasapp {
+    position: fixed;
+    bottom: 4vh;
+    text-decoration: none;
+    width: auto;
+    right: 5vh;
+    display: none;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.LinkWhatsapp {
+    background-color: white;
+    height: 5vh;
+    width: 30vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 0px 0px 5px 0.5px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 100;
+
+}
+
+.Dropdown-Whtasapp a {
+    position: relative;
+    z-index: 999;
+    font-size: 2.5vh;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.Dropdown-Whtasapp a:hover {
+    background-color: green;
+    color: white;
+}
+
+@keyframes Animação {
+    0% {
+        scale: 100%;
+        background-color: green;
+
+    }
+
+    100% {
+        scale: 100%;
+        background-color: rgb(0, 103, 0);
+
+    }
+}
+
+@media (max-width:670px) {
+    .Dropdown {
+        font-size: 10vh;
+        width: auto;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    .material-symbols-outlined {
+        margin-right: 5vh;
+        font-size: 7vh !important;
+        color: white;
+    }
+
+    .material-symbols-outlined:hover {
+        text-shadow: 0px 0px 3px 1px gray;
+    }
+
+    .Menu {
+        display: none;
+    }
+}
+
+/*==========================================================
+Parte do header 
+==========================================================*/
+
+.Pergunta1 {
+    color: white;
+    margin-top: 20vh;
+
+
+}
+
+.All {
+    color: white;
+}
+
+.material-symbols-outlined2 {
+    font-size: 10vh;
+    animation: cifraorodando 2s ease infinite;
+}
+
+.AllHeader {
+    display: flex;
+}
+
+@keyframes cifraorodando {
+    0% {
+        scale: 100%;
+    }
+
+    50% {
+        scale: 110%;
+    }
+
+    100% {
+        scale: 100%;
+    }
+}
+
+.ImgBitcoin {
+    display: none;
+    margin-top: 20vh;
+    width: 100vw;
+    margin-left: -7vw;
+    border-radius: 30%;
+    box-shadow: 0px 0px 40px 15px rgb(0, 0, 72);
+
+}
+
+.Pergunta {
+    width: auto;
+    margin-left: 5vh;
+}
+
+.BtnCadastro {
+    background-color: blue;
+    border: none;
+    padding: 1.5vh 2.5vh;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    animation: Cadastro 3s ease infinite;
+    margin-left: 5vh;
+
+}
+
+.BtnCadastro a {
+    text-decoration: none;
+    color: white;
+    font-size: 3vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+}
+
+.BtnCadastro:hover {
+    background-color: green;
+    scale: 105%;
+}
+
+@keyframes Cadastro {
+    0% {
+        scale: 100%;
+
+    }
+
+    25%{
+        transform: rotate(2deg);
+    }
+
+    50% {
+        scale: 108%;
+        box-shadow: 0px 0px 15px 1px white;
+    }
+
+    75%{
+        transform: rotate(-2deg);
+    }
+
+    100% {
+        scale: 100%;
+
+    }
+}
+
+@media (min-width:670px) {
+    .Pergunta {
+        display: flex;
+        width: 45vw;
+        margin-right: 10vw;
+
+    }
+
+    .Subtitulo {
+        width: 45vw;
+        margin-right: 10vw;
+    }
+
+    .ImgBitcoin {
+        display: flex;
+        width: 40vw;
+        justify-content: flex-end;
+        margin-right: 5vh;
+    }
+
+    .Template-Fundo {
+        display: flex;
+    }
+}
+
+
+/*============================================
+Cards
+==============================================*/
+
+.Cards {
+    background-color: darkblue;
+    box-shadow: 0px 0px 40px 30px darkblue;
+    margin-top: 30vh;
+    width: 96vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+}
+
+@keyframes cards {
+    0% {
+        scale: 100%;
+        box-shadow: 0px 0px 0px 0px blueviolet;
+    }
+
+    50% {
+        scale: 101%;
+        box-shadow: 0px 0px 30px 10px blueviolet;
+    }
+
+    100% {
+        scale: 100%;
+        box-shadow: 0px 0px 0px 0px blueviolet;
+    }
+}
+
+.Card1 {
+    margin-left: 5vw;
+    margin-top: 5vh;
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+    height: 50vh;
+    min-width: 30vh;
+    max-width: 40vh;
+    background-color: black;
+    border-radius: 10px;
+    animation: cards 2s ease infinite;
+}
+
+.Card2 {
+    margin-left: 5vw;
+    margin-top: 5vh;
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+    height: 50vh;
+    min-width: 30vh;
+    max-width: 40vh;
+    background-color: black;
+    border-radius: 10px;
+    animation: cards 2s ease infinite;
+}
+
+.Card3 {
+    position: relative;
+    z-index: 1;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+    height: 50vh;
+    min-width: 30vh;
+    max-width: 40vh;
+    background-color: black;
+    border-radius: 10px;
+    animation: cards 2s ease infinite;
+
+}
+
+.Card4 {
+    margin-left: 5vw;
+    margin-top: 5vh;
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+    height: 50vh;
+    min-width: 30vh;
+    max-width: 40vh;
+    background-color: black;
+    border-radius: 10px;
+    animation: cards 2s ease infinite;
+}
+
+.Card5 {
+    margin-left: 5vw;
+    margin-top: 5vh;
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+    height: 50vh;
+    min-width: 30vh;
+    max-width: 40vh;
+    background-color: black;
+    border-radius: 10px;
+    animation: cards 2s ease infinite;
+}
+
+article img {
+    width: 35vh;
+    margin-top: 2vh;
+    border-radius: 5px;
+    box-shadow: 0px 0px 14px 0.5px gray;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -1vh;
+
+}
+
+article h3 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 1vh;
+    text-align: center;
+    font-weight: 900;
+}
+
+article h4 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.3vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    margin: 1vh;
+    text-align: center;
+}
+
+article a {
+    margin-left: 2vh;
+    color: rgb(80, 80, 255);
+
+}
+
+article a:hover {
+    scale: 110%;
+    color: red;
+    text-decoration: none;
+}
+
+/*=====================================================
+STATISTICAS
+=======================================================*/
+
+.Statisticas {
+    margin-top: 30%;
+    margin-bottom: 30%;
+    margin-left: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section h1 {
+    color: white;
+    font-size: 5vh;
+    font-weight: 700;
+    font-size: 5vh;
+
+}
+
+section table {
+    color: white;
+    font-size: 2.5vw;
+    width: 90vw;
+    margin-right: 5vw;
+    box-shadow: 0px 0px 20px 5px rgb(77, 77, 77);
+    border-radius: 20px;
+    padding: 2vh;
+}
+
+section tr {
+    color: white;
+    margin: 1vh;
+    text-align: center;
+    font-size: 4vw;
+    margin-left: 2vw;
+    border-bottom: 2px solid white;
+
+}
+
+section th {
+    color: white;
+    margin: 1vh;
+    text-align: center;
+    font-size: 4vw;
+    border-bottom: 2px solid white;
+    margin-right: 2vh;
+}
+
+section td {
+    color: white;
+    margin: 1vh;
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
+.Agradecimentos p {
+    margin-top: 15vh;
+    box-shadow: 0px 0px 10px 2px gray;
+    border-radius: 5px 60px;
+    padding: 10vh;
+    color: white;
+    font-size: 3vh;
+    font-size: 4vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media (min-width:800px) {
+    .Agradecimentos {
+        display: flex;
+        width: 40vw;
+    }
+
+    section table {
+        display: flex;
+        width: 50vw;
+        height: auto;
+        margin-right: 4vw;
+        margin-left: -5vw;
+    }
+
+    section tr {
+        font-size: 2.5vw;
+        padding-bottom: 5vh;
+    }
+
+    section th {
+        font-size: 2.5vw;
+        
+    }
+
+}
+
+/*=================================================
+PERGUNTAS
+===================================================*/
+
+.perguntas{
+    margin-top: 30%;
+    margin-bottom: 30%;
+    background-color: white;
+    box-shadow: 0px 0px 45px 40px white;
+    color: black;
+    padding: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+}
+
+.perguntas h1{
+    color: black;
+    margin-bottom: -2vh;
+
+}
+
+.perguntas h4{
+    margin-bottom: -2vh;
+}
+
+.perguntas ol{
+    list-style-type: none;
+}
+
+
+
+.P1{
+    background-color: rgb(177, 177, 177);
+    border-radius: 20px;
+    padding: 1vh;
+    margin-top: 5vh;
+    width: 90vw;
+    animation: pergunta 2s ease infinite;
+}
+
+.P2{
+    background-color: rgb(177, 177, 177);
+    border-radius: 20px;
+    padding: 1vh;
+    margin-top: 5vh;
+    width: 90vw;
+    animation: pergunta 2s ease infinite;
+}
+
+.P3{
+    background-color: rgb(177, 177, 177);
+    border-radius: 20px;
+    padding: 1vh;
+    margin-top: 5vh;
+    width: 90vw;
+    animation: pergunta 2s ease infinite;
+}
+
+.P4{
+    background-color: rgb(177, 177, 177);
+    border-radius: 20px;
+    padding: 1vh;
+    margin-top: 5vh;
+    width: 90vw;
+    animation: pergunta 2s ease infinite;
+}
+
+.P5{
+    background-color: rgb(177, 177, 177);
+    border-radius: 20px;
+    padding: 1vh;
+    margin-top: 5vh;
+    width: 90vw;
+    animation: pergunta 2s ease infinite;
+}
+
+
+.Resposta {
+    font-size: 3vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    display: none;
+    
+}
+
+.P1:hover .Resposta{
+    display: flex;
+    width: 90vw;
+}
+
+.P2:hover .Resposta{
+    display: flex;
+    width: 90vw;
+}
+
+.P3:hover .Resposta{
+    display: flex;
+    width: 90vw;
+}
+
+.P4:hover .Resposta{
+    display: flex;
+    width: 90vw;
+}
+
+.P5:hover .Resposta{
+    display: flex;
+    width: 90vw;
+
+}
+
+@keyframes pergunta {
+    0%{
+        scale: 100%;
+    }
+
+    50%{
+        scale: 102%;
+        box-shadow: 0px 0px 15px 1px black;
+    }
+
+    100%{
+        scale: 100%;
+    }
+}
+
+/*========================================================
+RODA-PÉ
+==========================================================*/
+
+.Rodapé{
+    background-color: black;
+    position: relative;
+    top: -10vw;
+    bottom: -10vw;
+    z-index: 2;
+    
+}
+
+.informacoes{
+    color: white;
+    margin-left: 5vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vh;
+}
+
+.Dados{
+    margin-left: 2vw;
+}
+
+.canais h4{
+    color: white;
+    margin-left: 2vh;
+}
+
+.canais a{
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.redes-sociais{
+    margin-left: 2vw;
+}
+
+.redes-sociais img{
+    font-size: 2vh;
+}
+
+.canais{
+    margin-left: 5vw;
+}
